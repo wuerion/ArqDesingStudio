@@ -1,0 +1,76 @@
+<div class="flex flex-col-reverse gap-4">
+    <div class="flex overflow-x-auto snap-mandatory snap-x gap-4" id="usersScroll">
+        <!-- users -->
+        <div class="w-full px-4 flex items-center h-20 border-2 border-border-beige grow-0 shrink-0 snap-center user">
+            <div class="flex gap-4">
+                <img src="/src/images/andreaLopezUser.webp" alt="" class="w-16 h-16 rounded-full border">
+                <div>
+                    <p>Andrea Lopez</p>
+                    <p class="text-nowrap">Propietaria Residencial</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full px-4 flex items-center h-20 border-2 border-border-beige grow-0 shrink-0 snap-center user">
+            <div class="flex gap-4">
+                <img src="/src/images/carlosMendezUser.webp" alt="" class="w-16 h-16 rounded-full border">
+                <div>
+                    <p>Carlos Mendez</p>
+                    <p class="text-nowrap">Gerente Comercial</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full px-4 flex items-center h-20 border-2 border-border-beige grow-0 shrink-0 snap-center user">
+            <div class="flex gap-4 ">
+                <img src="/src/images/mariaGonzalesUser.webp" alt="" class="w-16 h-16 rounded-full border">
+                <div>
+                    <p>Maria Gonzalez</p>
+                    <p class="text-nowrap">Asesora Inmobiliaria</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full px-4 flex items-center h-20 border-2 border-border-beige grow-0 shrink-0 snap-center user">
+            <div class="flex gap-4">
+                <img src="/src/images/LuisOrtegaUser.webp" alt="" class="w-16 h-16 rounded-full border">
+                <div>
+                    <p>Luis Ortega</p>
+                    <p class="text-nowrap">Propietario Residencial</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <!-- Testimonio -->
+        <div class="border-2 h-40 border-border-beige p-4">
+            <p id="testimonialText">
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const testimonialText = document.getElementById("testimonialText");
+
+    const testimonios = [
+        "Trabajar con ArqDesign Studio fue una experiencia increíble. Entendieron perfectamente nuestras necesidades y transformaron nuestra casa en un espacio moderno y funcional.",
+        "Contratamos a ArqDesign para remodelar nuestras oficinas y el resultado fue espectacular. El diseñador no solo merojo la estética, sino tambien la rpoductividad de nuestro equipo. Muy recomendados.",
+        "La consultoria quer recibimos fue clave para el exito de nuestro proyecto inmobiliario. Nosbrindaron ideas innovadoras y soluciones sostenibles que agregaron mucho valor al desarrollo.",
+        "El equipo de ArqDesign Studio supo plasmar nuestras vision de manera impecable. Gracias a su profesionalismo y dedicacion, hoy disfrutamos de un hogar que supero todas nuestras expectativas."
+    ];
+
+    const users = document.querySelectorAll(".user");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    let index = Array.from(users).indexOf(entry.target);
+                    testimonialText.textContent = testimonios[index];
+                }
+            });
+        },
+        { root: document.getElementById("usersScroll"), threshold: 0.6 } // Detecta cuando el 60% del elemento está visible
+    );
+
+    users.forEach((user) => observer.observe(user));
+</script>
+

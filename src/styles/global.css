@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+    --color-border-beige: #f5f5dc;
+    --font-abpreto: 'Aboreto'
+}
