@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 import Projects from "../components/Projects.astro";
 import Testimonials from "../components/testimonials.astro";
+import Image from "../components/images.astro";
 ---
 
 <Layout>
@@ -53,14 +54,13 @@ import Testimonials from "../components/testimonials.astro";
 
 	<main class="flex flex-col gap-8">
 		<section class="flex flex-col-reverse p-2.5 ">
-			<!-- About -->
 			<div class="h-1/2">
-				<img
-					src="/src/images/imgAbout.webp"
-					alt=""
-					class="border-2 border-border-beige rounded-md"
+				<Image
+					ImgUrl="/src/images/imgAbout.webp"
+					alt="Imagen de ArqDesing Studio"
+					addClass="border-2 border-border-beige rounded-md"
 				/>
-			</div><!-- Imagen -->
+			</div>
 			<div class="h-1/2 my-2">
 				<div class=" w-full mb-3">
 					<h2 class="text-lg font-semibold text-green-950">Sobre Nosotros</h2>
