@@ -1,5 +1,4 @@
 ---
-// import Welcome from '../components/Welcome.astro';
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 import Projects from "../components/Projects.astro";
@@ -55,12 +54,12 @@ import Image from "../components/images.astro";
 	<main class="flex flex-col gap-8">
 		<section class="flex flex-col-reverse p-2.5 ">
 			<div class="h-1/2">
-				<!-- <Image
+				<Image
 					ImgUrl="/src/images/imgAbout.webp"
 					alt="Imagen de ArqDesing Studio"
 					addClass="border-2 border-border-beige rounded-md"
-				/> -->
-				<img src="/src/images/imgAbout.webp" alt="" class="border-2 border-border-beige rounded-md" />
+				/>
+				<!-- <img src="imgAbout.webp" alt="" class="border-2 border-border-beige rounded-md" /> -->
 			</div>
 			<div class="h-1/2 my-2">
 				<div class=" w-full mb-3">
@@ -230,7 +229,7 @@ import Image from "../components/images.astro";
 				<h2 class="text-green-950 text-lg font-semibold">Testimonios</h2>
 			</div>
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-				<Testimonials />
+				<Testimonials client:load/>
 			</div>
 		</section>
 	</main>
