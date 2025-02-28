@@ -8,13 +8,10 @@
     "dist"
   ],
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "outDir": "dist",
     "rootDir": ".",
     "paths": {
-      "astro/*": [
-        "./src/*"
-      ],
       "@/*": [
         "./src/*"
       ]
