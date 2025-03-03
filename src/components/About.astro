@@ -2,15 +2,16 @@
 import Images from '../components/images.astro';
 import ImgAbout from '../images/imgAbout.webp';
 ---
-<section class="flex flex-col-reverse p-2.5 ">
-    <div class="h-1/2">
+<section class="flex flex-col-reverse lg:flex-row p-2.5 ">
+    <div class="h-1/2 lg:w-1/2">
         <Images
             ImgUrl={ImgAbout}
             alt="Imagen de ArqDesing Studio"
-            addClass="border-2 border-border-beige rounded-md w-full"
+            addClass="border-2 border-border-beige rounded-md w-1/2 h-1/2 object-center"
+            contClass='md:flex items-center justify-center'
         />
     </div>
-    <div class="h-1/2 my-2">
+    <div class="h-1/2 lg:w-1/2 my-2 ">
         <div class=" w-full mb-3">
             <h2 class="text-lg font-semibold text-green-950">Sobre Nosotros</h2>
         </div>
