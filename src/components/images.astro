@@ -6,9 +6,10 @@ interface Props {
     ImgUrl: string | ImageMetadata;
     alt: string;
     addClass?: string;
+    contClass?: string;
 }
 
-const {ImgUrl, alt, addClass = "" } = Astro.props;
+const {ImgUrl, alt, addClass, contClass = "" } = Astro.props;
 
 const Img = await getImage({
     src: ImgUrl,
@@ -18,7 +19,7 @@ const Img = await getImage({
 });
 ---
 
-<picture>
+<picture class={contClass}>
     <source media="(max-width: 799px)" srcset={Img.src} />
     <img src={Img.src} alt={alt} class={addClass} loading="lazy" />
 </picture>
