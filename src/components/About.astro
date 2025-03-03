@@ -1,0 +1,58 @@
+---
+import Images from '../components/images.astro';
+import ImgAbout from '../images/imgAbout.webp';
+---
+<section class="flex flex-col-reverse p-2.5 ">
+    <div class="h-1/2">
+        <Images
+            ImgUrl={ImgAbout}
+            alt="Imagen de ArqDesing Studio"
+            addClass="border-2 border-border-beige rounded-md w-full"
+        />
+    </div>
+    <div class="h-1/2 my-2">
+        <div class=" w-full mb-3">
+            <h2 class="text-lg font-semibold text-green-950">Sobre Nosotros</h2>
+        </div>
+        <div class="flex flex-col gap-8">
+            <p>
+                En ArqDesing Studio, creemos que la arquitectura es mas
+                que diseñar espacios; es crear expreciencias que
+                conecten a las personas son su entorno. Con una vision
+                enfocada en la inovacion y le minimalismo, diseñamos
+                proyectos que combinan funcionalidad, estetica y
+                sostenibilidad.
+            </p>
+            <p>
+                Nuestro equipo esta conformado por arquitectos
+                apasionados y creativos que entienden que cada proyecto
+                es unico. Nos enorgullece trabajar con nuestros
+                clientes, desde la conceptualizacion hasta la ejecucion,
+                para dar vida a espacios que reflejen sus sueños y
+                necesidades.
+            </p>
+            <div>
+                <p>Nuestras Filosofia:</p>
+                <ul class="flex flex-col gap-3 mt-2 list-disc pl-3">
+                    <li>
+                        <span class="font-semibold">Diseño inovador:</span> Soluciones
+                        arquitectonicas modernas y varnguardistas.
+                    </li>
+                    <li>
+                        <span class="font-semibold">Sostenibilidad:</span> Compromisa
+                        con materiales y practicas responsables.
+                    </li>
+                    <li>
+                        <span class="font-semibold"
+                        >Atencion al Detalle:</span
+                        > Elavmos cada elemento para crear espacios memorables.
+                    </li>
+                </ul>
+            </div>
+            <p>
+                Nos impulsa la pasion por crear espacios atemporales que
+                dejen una huella positiva en quienes los habitan.
+            </p>
+        </div>
+    </div>
+</section>
